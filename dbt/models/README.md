@@ -28,13 +28,14 @@ models/
 │   ├── fct_individual_flights.sql
 │   └── fct_schema.yml
 │
-└── documentation.md
+├── README.md
+└── sources.yml
 ```
 
 ---
 
-## Sources (`raw.public`)
-Les données brutes proviennent de Snowflake (`raw.public`) :
+## Sources (`aircraft.public`)
+Les données brutes proviennent de Snowflake (`aircraft.public`) :
 
 - `aircraft`
 - `airlines`
@@ -43,7 +44,7 @@ Les données brutes proviennent de Snowflake (`raw.public`) :
 - `individual_flights`
 
 Déclarées dans :  
-**`sources.yml`**
+**`models/sources.yml`**
 
 ---
 
@@ -62,7 +63,7 @@ Modèles :
 - `stg_individual_flight.sql`  
 - `stg_flight_summary_data.sql`  
 
-Tests définis dans :  
+Tests STG : 
 `stg_schema.yml`
 
 ---
@@ -110,3 +111,6 @@ Tables analytiques compilant les métriques clés.
 - grain : 1 aéroport  
 - agrège arrivées + départs  
 - KPIs : nb vols, nb passagers estimés, nb compagnies, nb avions
+
+Tests FACT :  
+`fct_schema.yml`

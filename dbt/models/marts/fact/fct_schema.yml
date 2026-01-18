@@ -23,27 +23,27 @@ models:
                 field: aircraft_id
 
       - name: airline_code
-        description: "Code de la compagnie opératrice (FK dim_airlines)."
+        description: "Code de la compagnie opératrice (FK dim_airline)."
         tests:
           - relationships:
               arguments:
-                to: ref('dim_airlines')
+                to: ref('dim_airline')
                 field: airline_code
 
       - name: departure_airport_code
-        description: "Code de l'aéroport de départ (FK dim_airports)."
+        description: "Code de l'aéroport de départ (FK dim_airport)."
         tests:
           - relationships:
               arguments:
-                to: ref('dim_airports')
+                to: ref('dim_airport')
                 field: airport_code
 
       - name: destination_airport_code
-        description: "Code de l'aéroport d'arrivée (FK dim_airports)."
+        description: "Code de l'aéroport d'arrivée (FK dim_airport)."
         tests:
           - relationships:
               arguments:
-                to: ref('dim_airports')
+                to: ref('dim_airport')
                 field: airport_code
 
 
@@ -58,19 +58,19 @@ models:
           - not_null
 
       - name: airline_code
-        description: "Compagnie aérienne (FK dim_airlines)."
+        description: "Compagnie aérienne (FK dim_airline)."
         tests:
           - relationships:
               arguments:
-                to: ref('dim_airlines')
+                to: ref('dim_airline')
                 field: airline_code
 
       - name: airport_code
-        description: "Aéroport (FK dim_airports)."
+        description: "Aéroport (FK dim_airport)."
         tests:
           - relationships:
               arguments:
-                to: ref('dim_airports')
+                to: ref('dim_airport')
                 field: airport_code
 
       - name: asm_domestic
